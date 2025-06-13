@@ -1,0 +1,222 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! How can I help you?",
+        "Hello, how can I assist you today?",
+        "Hey! What can I do for you?",
+        "Good [morning/afternoon/evening]! How can I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Nice chatting to you, bye",
+        "Till next time"
+      ],
+      "responses": [
+        "See you!",
+        "Have a nice day!",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks for helping me"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Sorry, can't understand you.",
+        "Please give me more info.",
+        "Not sure I understand."
+      ]
+    },
+    {
+      "tag": "counseling",
+      "patterns": [
+        "How can therapy or counseling improve mental health?"
+       
+      ],
+      "responses": [
+        "Therapy and counseling provide a safe space to discuss emotions, thoughts, and concerns. A trained professional helps individuals:1.Identify triggers and coping mechanisms.2.Develop healthier thought patterns.3.Process past traumas and emotional pain.4.Improve communication and relationships.5.Gain self-awareness and emotional resilience."
+      ]
+    },
+    {
+      "tag": "Struggling",
+      "patterns": [
+        "What should I do if a friend or family member is struggling with their mental health?"
+       
+      ],
+      "responses": [
+        "Supporting a loved one with mental health challenges requires patience and understanding. Here’s how you can help:1.Listen Without Judgment Let them share their feelings without interrupting or offering solutions immediately 2.Encourage Professional Help Suggest speaking to a counselor or therapist if they seem overwhelmed.3. Support Healthy Habits Encourage activities like exercise, meditation, or creative hobbies."
+      ]
+    },
+  {
+    "tag": "sleep",
+    "patterns": [
+      "Can lack of sleep cause mental health problems?"
+      
+    ],
+    "responses": [
+      "Yes, sleep plays a crucial role in mental health. Poor sleep can:1.Increase stress, anxiety, and irritability.2.Reduce concentration and decision-making abilities.3.Weaken the immune system, leading to physical health issues.4.Contribute to depression and mood disorders."
+    ]
+  },
+
+  {
+    "tag": "psychologist",
+    "patterns": [
+      " When should I see a psychologist or psychiatrist?"
+      
+    ],
+    "responses": [
+      "Its time to seek professional help if you experience:1.Persistent sadness or anxiety for weeks.2.Difficulty functioning in daily life.3.Increased reliance on substances like alcohol or drugs.4.Thoughts of self-harm or suicide."
+    ]
+  },
+  {
+    "tag": "stress",
+    "patterns": [
+      "What are some effective ways to manage stress?"
+      
+    ],
+    "responses": [
+      "Managing stress involves techniques like deep breathing, meditation, regular exercise, maintaining a balanced diet, getting enough sleep, and engaging in activities you enjoy. Talking to someone about your feelings also helps."
+    ]
+  },
+  {
+    "tag": "anxiety",
+    "patterns": [
+      "Is anxiety normal, and when does it become a problem?"
+      
+    ],
+    "responses": [
+      "Feeling anxious in stressful situations is normal, but when anxiety becomes excessive, persistent, and interferes with daily life, it may indicate an anxiety disorder. If you experience intense worry, panic attacks, or avoid social situations, consider seeking professional help."
+    ]
+  },
+
+  {
+    "tag": "depression",
+    "patterns": [
+      "What are the signs of depression?"
+      
+    ],
+    "responses": [
+      "Common signs of depression include persistent sadness, loss of interest in activities, changes in sleep or appetite, fatigue, difficulty concentrating, and feelings of hopelessness. If these symptoms last for more than two weeks, it's important to seek support."
+    ]
+  },
+
+  {
+    "tag": "depression_cured",
+    "patterns": [
+      "Can depression be cured?"
+      
+    ],
+    "responses": [
+      "Depression is treatable with therapy, medication, lifestyle changes, and social support. While some people recover completely, others may need long-term management strategies to keep symptoms under control."
+    ]
+  },
+
+  {
+    "tag": "sleep_tips",
+    "patterns": [
+      "What are some tips for better sleep?"
+      
+    ],
+    "responses": [
+      "Try maintaining a regular sleep schedule, avoiding screens before bedtime, creating a relaxing nighttime routine, and reducing caffeine intake. Exercising during the day can also improve sleep quality."
+    ]
+  },
+  {
+    "tag": "manage_stress",
+    "patterns": [
+      "How can I manage stress at work?"
+      
+    ],
+    "responses": [
+      "Prioritize tasks, take breaks, practice deep breathing, and set realistic goals. Communicating with colleagues and maintaining work-life balance also help reduce stress."
+    ]
+  },
+
+    {
+      "tag": "mental_health",
+      "patterns": [
+        "What is mental health, and why is it important?"
+       
+      ],
+      "responses": [
+        "Mental health refers to a persons emotional, psychological, and social well-being. It affects how we think, feel, and behave in daily life. It also influences how we handle stress, relate to others, and make decisions. Good mental health allows individuals to cope with life’s challenges, work productively, and contribute to their communities. Ignoring mental health can lead to emotional distress, difficulties in relationships, and reduced quality of life."
+      ]
+    },
+    {
+      "tag": "struggling",
+      "patterns": [
+        "What are the common signs that someone might be struggling with their mental health?"
+      ],
+      "responses": [
+        "Signs of mental health struggles vary from person to person, but common symptoms include:1.Persistent sadness or mood swings,2.Excessive worrying or anxiety,3.Difficulty concentrating or making decisions, 4.Changes in sleeping or eating patterns, 5.Withdrawing from social interactions"
+      ]
+    },
+    {
+      "tag": "anxiety",
+      "patterns": [
+        "How can I manage stress and anxiety in daily life?"
+      ],
+      "responses": [
+        "Managing stress and anxiety is crucial for mental well-being. Here are some strategies that can help:1.Deep Breathing & Meditation Practicing mindfulness or deep breathing exercises can help calm your mind.2.Physical Activity Regular exercise helps release endorphins, which boost mood and reduce stress.3.Healthy Diet – Eating a balanced diet with nutritious foods helps regulate mood and energy levels.3.Adequate Sleep Prioritizing sleep improves emotional regulation and cognitive function"
+      ]
+    },
+    {
+      "tag": "nutrition_mental_health",
+      "patterns": [
+        "How does food affect my mood?"
+        
+      ],
+      "responses": [
+        "Yes, certain foods can positively affect your mood. For example, omega-3-rich foods, such as fish and walnuts, can support brain function.A balanced diet rich in vitamins and minerals can help manage symptoms of depression. Foods high in antioxidants, such as leafy greens, are particularly beneficial.Eating healthy foods like fruits, vegetables, and lean proteins can improve your overall mental well-being.Foods rich in magnesium, zinc, and B vitamins can help reduce symptoms of anxiety and stress.Nutrition plays a significant role in mental health. Proper hydration and balanced meals can help you feel more energized and focused."
+      ]
+    },
+    {
+      "tag": "hospital_info",
+      "patterns": [
+        "Where is the nearest hospital?,Can you help me find a hospital?,What are the best hospitals for anxiety or depression?"
+      ],
+      "responses": [
+        "Jagruti Rehabilitation Center: Located on Pune Solapur Road in Hadapsar.Sanwaad Rehabilitation Center: Located in Somnath Nagar in Vadgaon Sheri.Chaitanya Institute For Mental Health: Located at Machine Khadi Machine Chowk.I can help you find hospitals. Please share your location or area, and I'll guide you to the nearest one.For emergency care, you can go to the nearest hospital's emergency room.You can find hospitals with mental health services by searching online or through local health directories.It would be best to consult your doctor or therapist for a referral to the best mental health facility.I recommend searching for local hospitals or health services in your area using online resources like Google or a hospital directory."
+      ]
+    },
+    {
+      "tag": "self_care",
+      "patterns": [
+        "How can I take care of my mental health?"
+      ],
+      "responses": [
+        "Self-care is important for mental health. Try activities like exercise, meditation, journaling, or spending time with loved ones.Taking small steps every day, like getting enough sleep, eating healthy, and practicing mindfulness, can improve your mental well-being."
+      ]
+    }
+  ]
+}

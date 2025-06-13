@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Mental Health System{% endblock title %}
+
+{% block content %}
+    <!-- Hero Start -->
+    <div class="container-fluid py-5 mb-5 hero-header"
+        style="background: url('{% static 'img/chat1.png' %}') no-repeat center center/cover; background-size: cover; background-position: center;">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-6"
+                        style="border-color: rgba(256, 256, 256, .3) !important;">
+                        Welcome To Mental Health System
+                    </h5>
+                    <h1 class="display-1 text-white mb-md-4">Personalized Support for a Balanced Life</h1>
+                    <div class="pt-2">
+                        <a href="{% url 'eng_voice' %}" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">English Voice Chatbot</a> {# Updated link #}
+                        <a href="{% url 'eng_text' %}" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">English Text Chatbot</a> {# Updated link #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+{% endblock content %}

@@ -1,0 +1,259 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Customer Portal - Mental Health System{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mental Health, Chatbot, Assessment">
+    <meta name="description" content="A mental health system with chatbot support and assessments.">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+    <!-- Libraries Stylesheets -->
+    <link rel="stylesheet" href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}">
+
+    <!-- Bootstrap & Custom Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        /* Customer Sidebar Specific Styles */
+        .sidebar {
+            width: 250px;
+            height: calc(100vh - 70px); /* Full height minus navbar height */
+            position: fixed;
+            top: 70px; /* Position below the main navbar */
+            left: 0;
+            background-color: #343a40; /* Dark background for sidebar */
+            padding-top: 20px; /* Padding inside sidebar */
+            color: white;
+            z-index: 999; /* Ensure sidebar is below main navbar but above content */
+            overflow-y: auto; /* Enable scrolling for long content */
+            transition: all 0.3s ease; /* Smooth transition for responsiveness */
+        }
+
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #007bff; /* Primary color on hover/active */
+            color: white;
+        }
+
+        .sidebar h4, .sidebar h6 {
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Main content area wrapper */
+        .page-content-wrapper {
+            margin-left: 250px; /* Push content to the right by sidebar width */
+            padding-top: 20px; /* Add some top padding */
+            min-height: calc(100vh - 70px - 150px); /* Adjust for footer and navbar */
+            /* You might need to fine-tune 150px based on actual footer height */
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative; /* Change to relative for small screens */
+                top: auto;
+                left: auto;
+                display: flex; /* Make sidebar links horizontal */
+                flex-wrap: wrap; /* Allow wrapping on small screens */
+                justify-content: center; /* Center items */
+                padding-top: 0; /* Remove top padding when relative */
+            }
+
+            .sidebar a {
+                flex: 1 1 auto; /* Allow items to grow and shrink */
+                min-width: 150px; /* Minimum width for each item */
+                text-align: center; /* Center text in horizontal links */
+            }
+
+            .page-content-wrapper {
+                margin-left: 0; /* No margin on smaller screens */
+                padding-top: 0; /* Remove top padding from content when sidebar is relative */
+            }
+        }
+    </style>
+    {% block extra_head %}{% endblock extra_head %} {# For specific styles from child templates #}
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a class="text-decoration-none text-body pe-3" href="#"><i class="bi bi-telephone me-2"></i>+012 345 6789</a>
+                <span class="text-body">|</span>
+                <a class="text-decoration-none text-body px-3" href="#"><i class="bi bi-envelope me-2"></i>info@example.com</a>
+            </div>
+            <div>
+                <a class="text-body px-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body px-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-body px-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-body px-2" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="text-body ps-2" href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light py-3">
+                <a href="{% url 'index' %}" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>MENTAL HEALTH SYSTEM</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="{% url 'index' %}" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                        <a href="{% url 'assessment_view' %}" class="nav-item nav-link {% if request.path == '/assessment_view/' %}active{% endif %}">Assessment</a>
+                        <a href="{% url 'customer_dashboard_view' %}" class="nav-item nav-link {% if request.path == '/customer_dashboard_view/' %}active{% endif %}">Chatbot</a>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'logout_request' %}" class="nav-item nav-link">Logout</a>
+                        {% else %}
+                            <a href="{% url 'register' %}" class="nav-item nav-link">Sign Up</a>
+                            <a href="{% url 'login1' %}" class="nav-item nav-link">Sign In</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="d-flex"> {# Use flexbox for the main layout to manage sidebar and content side-by-side #}
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <center>
+                {% if user.is_authenticated %}
+                    <h4>{{ user.first_name|default:"User" }}</h4> {# Use default if first_name is empty #}
+                    <h6 class="text-white">Welcome, {{ user.username }}</h6>
+                {% else %}
+                    <h6 class="text-white">Welcome, Guest</h6>
+                {% endif %}
+            </center>
+            <a href="{% url 'customer_dashboard_view' %}" class="{% if request.resolver_match.url_name == 'customer_dashboard_view' %}active{% endif %}"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+            <a href="{% url 'engm' %}" class="{% if request.resolver_match.url_name == 'engm' %}active{% endif %}"><i class="fas fa-microphone me-2"></i> Marathi Voice</a>
+            <a href="{% url 'engh' %}" class="{% if request.resolver_match.url_name == 'engh' %}active{% endif %}"><i class="fas fa-microphone me-2"></i> Hindi Voice</a>
+            <a href="{% url 'eng' %}" class="{% if request.resolver_match.url_name == 'eng' %}active{% endif %}"><i class="fas fa-comments me-2"></i> English Text Chatbot</a>
+        </div>
+        <!-- Sidebar End -->
+
+        {# Main content area, pushed by the sidebar #}
+        <div class="page-content-wrapper flex-grow-1">
+            {% block customer_content %}
+            {# Child templates will insert their customer-specific content here #}
+            {% endblock customer_content %}
+        </div>
+    </div>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
+                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="{% url 'index' %}"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="{% url 'service' %}"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="{% url 'team' %}"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a> {# Placeholder #}
+                        <a class="text-light" href="{% url 'contact' %}"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="{% url 'index' %}"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="{% url 'service' %}"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="{% url 'team' %}"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a> {# Placeholder #}
+                        <a class="text-light" href="{% url 'contact' %}"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

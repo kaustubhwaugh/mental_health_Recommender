@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Prediction Test</title>
+</head>
+<body>
+    <h2>Test Mental Health Prediction</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <p>Enter your answers (1 to 5):</p>
+
+        {% for i in range(1, 21) %}
+            <label for="Q{{ i }}">Q{{ i }}:</label>
+            <input type="number" id="Q{{ i }}" name="Q{{ i }}" min="1" max="5" required><br><br>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if presence %}
+        <h3>Prediction Result:</h3>
+        <p><strong>Conditions Present:</strong> {{ presence }}</p>
+        <p><strong>Severity:</strong> {{ severity }}</p>
+    {% endif %}
+</body>
+</html>

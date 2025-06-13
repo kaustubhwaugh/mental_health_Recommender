@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Mental Health System{% endblock title %}
+
+{% block content %}
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Solace</h5>
+                    <h1 c   lass="display-1 text-white mb-md-4">Your Path to a Healthier Mind Starts Here</h1>
+                    <div class="pt-2">
+                        <a href="{% url 'customer_dashboard_view' %}" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Chatbot</a>
+                        <a href="{% url 'assessment_view' %}" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Assessment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h5 class="text-uppercase text-primary fw-bold border-bottom border-3 d-inline-block pb-2">What We Offer</h5>
+                <h1 class="display-5 text-dark">Empowering Your Mental Well-being</h1>
+                <p class="text-muted">We provide comprehensive mental health services designed to support, heal, and empower individuals at every stage of their journey.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Service Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 rounded shadow-lg">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-3x fa-user-nurse text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold">One-on-One Therapy</h4>
+                        <p class="text-muted">Personalized sessions with licensed therapists to help navigate life's challenges.</p>
+                        <a class="btn btn-outline-primary rounded-pill px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 rounded shadow-lg">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-3x fa-users text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold">Community Support Groups</h4>
+                        <p class="text-muted">Join a safe and understanding community to share experiences and heal together.</p>
+                        <a class="btn btn-outline-primary rounded-pill px-4" href="#">Join Now</a>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 rounded shadow-lg">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-3x fa-leaf text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold">Mindfulness & Meditation</h4>
+                        <p class="text-muted">Guided meditation and mindfulness techniques to reduce stress and enhance focus.</p>
+                        <a class="btn btn-outline-primary rounded-pill px-4" href="#">Explore More</a>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 rounded shadow-lg">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-3x fa-pills text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold">Medication Assistance</h4>
+                        <p class="text-muted">Expert guidance on psychiatric medication, side effects, and proper usage.</p>
+                        <a class="btn btn-outline-primary rounded-pill px-4" href="#">Get Advice</a>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 rounded shadow-lg">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-3x fa-robot text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold">AI-Powered Chat Support</h4>
+                        <p class="text-muted">Instant emotional support through AI chatbot available 24/7.</p>
+                        <a class="btn btn-outline-primary rounded-pill px-4" href="#">Try Now</a>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 rounded shadow-lg">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-3x fa-dumbbell text-primary"></i>
+                        </div>
+                        <h4 class="fw-bold">Holistic Wellness Programs</h4>
+                        <p class="text-muted">Tailored programs integrating fitness, nutrition, and mental wellness.</p>
+                        <a class="btn btn-outline-primary rounded-pill px-4" href="#">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+{% endblock content %}

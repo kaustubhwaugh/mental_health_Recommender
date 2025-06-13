@@ -1,0 +1,90 @@
+﻿Question_Id,Question_Text,Option_A_Text,Option_B_Text,Option_C_Text,Option_D_Text,Question_Topic,Targeted_Symptoms,Difficulty_Level
+Q1,Do you have little interest or pleasure in doing things?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q2,"Do you often feel down, depressed, or hopeless?",Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q3,"Do you have trouble falling asleep, staying asleep, or do you sleep too much?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q4,Do you often feel tired or like you have little energy?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q5,Do you have a poor appetite or do you find yourself overeating?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q6,Do you feel bad about yourself or that you have failed or let others down?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q7,Do you have trouble concentrating on things like reading or watching television?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q8,"Have others noticed that you move or speak more slowly than usual, or that you're unusually restless?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q9,Have you had thoughts of harming yourself or feeling like you'd be better off dead?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",5
+Q10,"In the last month, how often have you been upset because of something that happened unexpectedly?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q11,"In the last month, how often have you felt that you were unable to control the important things in your life?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q12,"In the last month, how often have you felt nervous and stressed?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q13,"In the last month, how often have you felt confident about your ability to handle your personal problems?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q14,"In the last month, how often have you felt that things were going your way?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q15,"In the last month, how often have you found that you could not cope with all the things that you had to do?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q16,"In the last month, how often have you been able to control irritations in?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q17,"In the last month, how often have you felt that you were on top of things?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q18,"In the last month, how often have you been angered because of things that happened that were outside of your control?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q19,"In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q20,"Are you Feeling nervous, anxious, or on edge?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q21,Are you Not being able to stop or control worrying?,Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q22,Are you worrying too much about different things?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q23,Do you have trouble relaxing?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q24,Do you feel so restless that it is hard to sit still?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q25,Are you Becoming easily annoyed or irritable?,Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q26,"D you Feel afraid, as if something awful might happen?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q27,"Repeated, disturbing, and unwanted memories of the stressful experience?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q28,"Repeated, disturbing dreams of the stressful experience?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q29,Suddenly feeling or acting as if the stressful experience were actually happening again (as if you were actually back there reliving it)?,Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q30,Feeling very upset when something reminded you of the stressful experience?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q31,"Having strong physical reactions when something reminded you of the stressful experience (for example, heart pounding, trouble breathing, sweating)?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q32,"Avoiding memories, thoughts, or feelings related to the stressful experiences(for example, people, places, conversations, activities,??",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q33,"Avoiding external reminders of the stressful experience (for example, people, places, conversations, activities)?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q34,Trouble remembering important parts of the stressful experience?,Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q35,"Having strong negative beliefs about yourself, other people, or the world (for example, having thoughts such as: I am bad, there is something seriously wrong with me, no one can be trusted, the world is completely dangerous)?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q36,Blaming yourself or someone else for the stressful?,Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q37,experience or what happened after it?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q38,"Having strong negative feelings such as fear, horror, anger,guilt, or shame?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q39,Loss of interest in activities that you used to enjoy?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q40,Feeling distant or cut off from other people?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q41,"Trouble experiencing positive feelings (for example,being unable to feel happiness or have loving feelings for people close to you)?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q42,"Irritable behavior, angry outbursts, or acting aggressively?",Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q43,Taking too many risks or doing things that could cause?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q44,Being â€œsuperalertâ€ or watchful or on guard?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q45,Feeling jumpy or easily startled?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q46,Having difficulty concentrating?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q47,Trouble falling or staying asleep?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q48,I found myself getting upset by quite trivial things?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q49,I was aware of dryness of my mouth?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q50,I couldn't seem to experience any positive feeling at all?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q51,"I experienced breathing difficulty (eg. excessively rapid breathing, breathlessness in the absence of physical exertion)?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q52,I just couldn't seem to get going?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q53,I tended to over-react to situations?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q54,I had a feeling of shakiness (e.g. legs going to give way)?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q55,I found it difficult to relax?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q56,I found myself in situations that made me so anxious I was most relieved when they ended?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q57,I felt that I had nothing to look forward to?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q58,I found myself getting upset rather easily?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q59,I felt that I was using a lot of nervous energy?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q60,I felt sad and depressed?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q61,"I found myself getting impatient when I was delayed kept waiting in any way (e.g. lifts, traffic lights, being kept waiting)?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q62,I had a feeling of faintness?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q63,I felt that I had lost interest in just about everything?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q64,I felt I wasn't worth much as a person?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q65,I felt that I was rather touchy?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q66,I perspired noticeably (e.g. hands sweaty) in the absence ofhigh temperatures or physical  exertion?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q67,I felt scared without any good reason?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q68,I felt that life wasn't worthwhile?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q69,I found it hard to wind down?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q70,I had difficulty in swallowing?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q71,I couldn't seem to get any enjoyment out of the things I did?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q72,"I was aware of the action of my heart in the absence of physical exertion (e.g. sense of heart rate increase, heart missing a beat)?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q73,I felt down-hearted and blue?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q74,I found that I was very irritable?,Never,Sometimes,Often,Always,Stress,"Overwhelm, Irritability",3
+Q75,I felt I was close to panic?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",4
+Q76,I found it hard to calm down after something upset me?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q77,"I feared that I would be ""thrown"" by some trivial but unfamiliar task?",Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q78,I was unable to become enthusiastic about anything?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q79,I found it difficult to tolerate interruptions to what I was doing?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q80,I was in a state of nervous tension?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q81,I felt I was pretty worthless?,Never,Sometimes,Often,Always,Depression,"Low mood, Fatigue",3
+Q82,I was intolerant of anything that kept me from getting on with what I was doing?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q83,I felt terrified?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",4
+Q84,I could see nothing in the future to be hopeful about?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q85,I felt that life was meaningless?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q86,I found myself getting agitated?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3
+Q87,I was worried about situations in which I might panic and make a fool of myself?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",4
+Q88,I experienced trembling (e.g. in the hands)?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",4
+Q89,I found it difficult to work up the initiative to do things?,Never,Sometimes,Often,Always,Anxiety,"Worry, Restlessness",3

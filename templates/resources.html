@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Support Resources – Solace{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4 text-center">🧘‍♀ Wellness & Support Resources</h1>
+    <p class="lead text-center mb-5">Here are curated videos to help you calm your mind, move your body, and find your balance.</p>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for video in video_resources %} {# Loop through the video_resources passed from views.py #}
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <div class="ratio ratio-16x9">
+                    <iframe src="{{ video.link }}" title="{{ video.title }}" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ video.title }}</h5>
+                    {% if video.description %}<p class="card-text">{{ video.description }}</p>{% endif %} {# Display description if available #}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

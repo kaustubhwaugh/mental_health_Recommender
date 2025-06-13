@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - Mental Health System{% endblock title %}
+
+{% block content %}
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Services</h5>
+                <h1 class="display-4">Comprehensive Mental Health Care</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-brain text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Psychological Counseling</h4>
+                        <p class="m-0">Professional counseling sessions to support emotional well-being and mental resilience.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-user-md text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Psychiatric Consultation</h4>
+                        <p class="m-0">Expert psychiatric evaluation and treatment plans tailored to individual needs.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-hands-helping text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Support Groups</h4>
+                        <p class="m-0">Join community-led support groups for shared experiences and healing.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-spa text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Stress Management</h4>
+                        <p class="m-0">Personalized programs for relaxation techniques and stress reduction.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-heartbeat text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Mental Health Chatbot</h4>
+                        <p class="m-0">AI-powered chatbot providing emotional support, stress management tips, and guided self-help resources 24/7.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-tablets text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Coping Strategies</h4>
+                        <p class="m-0">Practical tips and exercises to manage stress and anxiety.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Mental Health Awareness Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Mental Health</h5>
+                        <h1 class="display-4">Your Mental Well-being Matters</h1>
+                    </div>
+                    <p class="text-white mb-5">Solace is more than just a mental health tool  it's a quiet companion during chaotic days. Built specifically for students, it offers thoughtful prompts, space to reflect, and conversation when you need it most. No judgment, no pressure  just simple support that fits into your routine.</p>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">Learn More</a>
+                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">Get Support</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="{% static 'img/image3.jpg' %}" class="img-fluid rounded" alt="Mental Health Awareness"style="width: 200%; height: auto; max-width: 500px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mental Health Awareness End -->
+{% endblock content %}

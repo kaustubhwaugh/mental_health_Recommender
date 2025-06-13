@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Your Assessment Results - Mental Health System{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">Your Assessment Results</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5"> {# Changed from container-xxl to container-fluid for Bootstrap 4 compatibility #}
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-4">Your Mental Well-being Overview</h1>
+
+                {% if severity_results %}
+                    <p class="fs-5 text-dark">Based on your responses, here's your current assessment:</p>
+                    <div class="row g-3 mb-4">
+                        {% for condition, level in severity_results.items %}
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">{{ condition }} Level:</h5>
+                                    <p class="card-text fs-4 fw-bold
+                                        {% if level == 'Severe' %}text-danger{% elif level == 'Moderate' %}text-warning{% elif level == 'Mild' %}text-info{% else %}text-success{% endif %}">
+                                        {{ level }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    {% if recommendations.critical_recommendations %}
+                    <div class="alert alert-danger text-center mb-4" role="alert">
+                        <h4 class="alert-heading">Immediate Attention Recommended!</h4>
+                        <p>Your assessment indicates a **Severe** level in one or more areas. Please consider seeking professional help immediately.</p>
+                        <hr>
+                        <p class="mb-0">You are not alone. Resources are available to help you through this.</p>
+                        <h5 class="mt-3">Urgent Contacts:</h5>
+                        <div class="list-group">
+                            {% for rec in recommendations.critical_recommendations %}
+                            <a href="{{ rec.link }}" class="list-group-item list-group-item-action list-group-item-danger" target="_blank" rel="noopener noreferrer">
+                                <strong>{{ rec.title }}:</strong> {{ rec.description }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <h2 class="mb-3 mt-5">Recommendations Tailored for You:</h2>
+
+                    {# Display General Recommendations #}
+                    {% if recommendations.general_recommendations %}
+                        <h3 class="mt-4">General Well-being & Self-Care:</h3>
+                        <div class="accordion mb-4" id="generalRecommendationsAccordion">
+                            {% for rec in recommendations.general_recommendations %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingGeneral{{ forloop.counter }}">
+                                    <button class="accordion-button {% if forloop.first %} {% else %} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral{{ forloop.counter }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapseGeneral{{ forloop.counter }}">
+                                        {{ rec.title }}
+                                    </button>
+                                </h2>
+                                <div id="collapseGeneral{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="headingGeneral{{ forloop.counter }}" data-bs-parent="#generalRecommendationsAccordion">
+                                    <div class="accordion-body">
+                                        <p>{{ rec.description }}</p>
+                                        {% if rec.link and rec.link != '#' %}
+                                            <a href="{{ rec.link }}" class="btn btn-primary btn-sm mt-2" target="_blank" rel="noopener noreferrer">Learn More / Get Help</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {# Display Condition-Specific Recommendations #}
+                    {% for condition, cond_recs in recommendations.condition_recommendations.items %}
+                        {% if cond_recs %} {# Only display if there are recommendations for this condition #}
+                            <h3 class="mt-4">Recommendations for {{ condition }}:</h3>
+                            <div class="accordion mb-4" id="{{ condition }}RecommendationsAccordion">
+                                {% for rec in cond_recs %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ condition }}{{ forloop.counter }}">
+                                        <button class="accordion-button {% if forloop.first %} {% else %} collapsed {% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ condition }}{{ forloop.counter }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ condition }}{{ forloop.counter }}">
+                                            {{ rec.title }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{ condition }}{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ condition }}{{ forloop.counter }}" data-bs-parent="#{{ condition }}RecommendationsAccordion">
+                                        <div class="accordion-body">
+                                            <p>{{ rec.description }}</p>
+                                            {% if rec.link and rec.link != '#' %}
+                                                <a href="{{ rec.link }}" class="btn btn-primary btn-sm mt-2" target="_blank" rel="noopener noreferrer">Learn More / Get Help</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    {# Display Media Resources (Videos) #}
+                    {% if recommendations.media_resources %}
+                        <h2 class="mb-3 mt-5">🧘‍♀️ Wellness & Support Resources (Videos):</h2>
+                        <p class="lead text-center mb-5">Here are curated videos to help you calm your mind, move your body, and find your balance.</p>
+
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            {% for video in recommendations.media_resources %}
+                            <div class="col">
+                                <div class="card shadow-sm h-100">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="{{ video.link }}" title="{{ video.title }}" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ video.title }}</h5>
+                                        <p class="card-text">{{ video.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                {% else %}
+                    <p class="fs-5 text-dark">No assessment results found. Please complete the <a href="{% url 'assessment_view' %}">assessment</a> to see your recommendations.</p>
+                {% endif %}
+
+                <h2 class="mb-3 mt-5">General Support Resources (Always Available):</h2>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm p-3">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Mental Health Helpline (India)</h5>
+                                <p class="card-text">
+                                    If you are in distress, please reach out to a helpline for immediate support.
+                                </p>
+                                <a href="https://www.mohfw.gov.in/pdf/ListofPsychosocialHelplines.pdf" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Find Helplines (MoHFW)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm p-3">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Explore Therapy Platforms</h5>
+                                <p class="card-text">
+                                    Consider online therapy for convenient and accessible professional support.
+                                </p>
+                                <a href="https://www.betterhelp.com/" class="btn btn-secondary btn-sm me-2" target="_blank" rel="noopener noreferrer">BetterHelp</a>
+                                <a href="https://www.talkspace.com/" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Talkspace</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

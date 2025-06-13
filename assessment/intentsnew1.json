@@ -1,0 +1,557 @@
+{"intents": [
+        {"tag": "greeting",
+        "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+        "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+        "context": [""]
+       },
+       {"tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+        "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+        "context": [""]
+       },
+       {"tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"],
+        "context": [""]
+       },
+       {"tag": "noanswer",
+        "patterns": [],
+        "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+        "context": [""]
+       },
+       {"tag": "initial",
+        "patterns": ["I am not feeling well","I am not okay.","I am feeling week"],
+        "responses": ["Ohho Don't worry. I'll help you.", "Be relax. Tell me Symptoms you are suffering from.", "Here I am to assist you."],
+        "context": [""]
+       },
+        {"tag": "Mental Health",
+         "patterns": [" What is mental health?"],
+         "responses": ["Mental health refers to a person's emotional, psychological, and social well-being. It affects how we think, feel, and behave in daily life."],
+         "context": [""]
+        },
+        {"tag": "Stress",
+         "patterns": ["How can I reduce stress?"],
+         "responses": ["Practice deep breathing, exercise regularly, get enough sleep, and take breaks when needed. Talking to someone can also help."],
+         "context": [""]
+        },
+        {"tag": "Anxiety",
+         "patterns": ["What are some relaxation techniques for anxiety?"],
+         "responses": ["Meditation, deep breathing exercises, progressive muscle relaxation, listening to calming music, and mindfulness can help reduce anxiety."],
+         "context": [""]
+        },
+        {"tag": "Diet",
+         "patterns": ["Can diet affect mental health?"],
+         "responses": ["Yes! A healthy diet rich in fruits, vegetables, and omega-3 fatty acids can boost mood and brain function."],
+         "context": [""]
+        },
+	{"tag": "Depression",
+         "patterns": ["How can I support a friend with depression?"],
+         "responses": ["Listen without judgment, encourage them to seek help, and check in regularly to show you care."],
+         "context": [""]
+        },
+	{"tag": "Sadness",
+         "patterns": ["What should I do if I feel sad all the time?"],
+         "responses": ["Talk to someone you trust, engage in activities you enjoy, and seek professional help if sadness persists."],
+         "context": [""]
+        },
+	{"tag": "Struggling",
+         "patterns": ["What should I do if a friend or family member is struggling with their mental health?" ],
+         "responses": ["Supporting a loved one with mental health challenges requires patience and understanding. Heres how you can help:1.Listen Without Judgment Let them share their feelings without interrupting or offering solutions immediately 2.Encourage Professional Help Suggest speaking to a counselor or therapist if they seem overwhelmed.3. Support Healthy Habits Encourage activities like exercise, meditation, or creative hobbies."],
+         "context": [""]
+        },
+        {"tag": "Sleep ",
+         "patterns": ["Can lack of sleep cause mental health problems?"],
+         "responses": ["Yes, sleep plays a crucial role in mental health. Poor sleep can:1.Increase stress, anxiety, and irritability.2.Reduce concentration and decision-making abilities.3.Weaken the immune system, leading to physical health issues.4.Contribute to depression and mood disorders."],
+         "context": [""]
+        },
+	{"tag": "psychologist",
+         "patterns": ["When should I see a psychologist or psychiatrist?"],
+         "responses": ["Its time to seek professional help if you experience:1.Persistent sadness or anxiety for weeks.2.Difficulty functioning in daily life.3.Increased reliance on substances like alcohol or drugs.4.Thoughts of self-harm or suicide."],
+         "context": [""]
+        },
+	{"tag": "Emotional Well-being",
+         "patterns": ["How can I stay emotionally strong?"],
+         "responses": ["Practice self-care, stay connected with loved ones, and develop healthy coping strategies like journaling or meditation."],
+         "context": [""]
+        },
+	{
+        "tag": "fear_of_failure",
+        "patterns": ["How can I overcome the fear of failure?"],
+        "responses": ["See failure as a learning opportunity, set realistic goals, and remind yourself that setbacks are part of growth."],
+        "context": [""]
+        },
+	{"tag": "Coping Strategies",
+         "patterns": ["What are healthy ways to cope with failure?"],
+         "responses": [" Accept it as a learning experience, focus on self-improvement, and remind yourself that failure is a step toward success."],
+         "context": [""]
+        },
+	{"tag": "depression_cured",
+         "patterns": ["Can depression be cured?"],
+         "responses": ["Depression is treatable with therapy, medication, lifestyle changes, and social support. While some people recover completely, others may need long-term management strategies to keep symptoms under control."],
+         "context": [""]
+        },
+	{"tag": "sleep_tips",
+         "patterns": ["What are some tips for better sleep?"],
+         "responses": ["Try maintaining a regular sleep schedule, avoiding screens before bedtime, creating a relaxing nighttime routine, and reducing caffeine intake. Exercising during the day can also improve sleep quality."],
+         "context": [""]
+        },
+	{"tag": "manage_stress",
+         "patterns": ["How can I manage stress at work?"],
+         "responses": ["Prioritize tasks, take breaks, practice deep breathing, and set realistic goals. Communicating with colleagues and maintaining work-life balance also help reduce stress."],
+         "context": [""]
+        },
+        
+   	 {"tag": "mental_health",
+         "patterns": ["What is mental health, and why is it important?"],
+         "responses": ["Mental health refers to a persons emotional, psychological, and social well-being. It affects how we think, feel, and behave in daily life. It also influences how we handle stress, relate to others, and make decisions. Good mental health allows individuals to cope with life’s challenges, work productively, and contribute to their communities. Ignoring mental health can lead to emotional distress, difficulties in relationships, and reduced quality of life."],
+         "context": [""]
+     	},
+     	{"tag": "Mental Health and Technology",
+         "patterns": ["Can social media affect mental health?"],
+         "responses": [" Yes, excessive social media use can increase anxiety, depression, and low self-esteem. Limiting screen time and following positive content can help."],
+         "context": [""]
+        },
+	{"tag": "Social and Work Stress",
+         "patterns": ["How do I handle toxic people in my life?"],
+         "responses": ["Set clear boundaries, limit interactions, and focus on relationships that bring positivity and support."],
+         "context": [""]
+        },
+	{"tag": "dark circles",
+         "patterns": ["dark coloration of the skin under the eyes,"],
+         "responses": ["It seems like you are having dark circles,You may take few medicines from this=>Avoid triggers,Use an over-the-counter anti-itch drug,Apply cold washcloth,Take a comfortably cool bath,Wear loose, smooth-textured cotton clothing,Avoid the sun,You can meet one of the doctor from this list..."],
+         "context": [""]
+        },
+
+	{"tag": "nutrition_mental_health",
+         "patterns": ["How does food affect my mood?"],
+         "responses": ["Yes, certain foods can positively affect your mood. For example, omega-3-rich foods, such as fish and walnuts, can support brain function.A balanced diet rich in vitamins and minerals can help manage symptoms of depression. Foods high in antioxidants, such as leafy greens, are particularly beneficial.Eating healthy foods like fruits, vegetables, and lean proteins can improve your overall mental well-being.Foods rich in magnesium, zinc, and B vitamins can help reduce symptoms of anxiety and stress.Nutrition plays a significant role in mental health. Proper hydration and balanced meals can help you feel more energized and focused."],
+         "context": [""]
+         },
+
+	{"tag": "hospital_info",
+         "patterns": ["Where is the nearest hospital?,Can you help me find a hospital?,What are the best hospitals for anxiety or depression?"],
+         "responses": ["Jagruti Rehabilitation Center: Located on Pune Solapur Road in Hadapsar.Sanwaad Rehabilitation Center: Located in Somnath Nagar in Vadgaon Sheri.Chaitanya Institute For Mental Health: Located at Machine Khadi Machine Chowk.I can help you find hospitals. Please share your location or area, and I'll guide you to the nearest one.For emergency care, you can go to the nearest hospital's emergency room.You can find hospitals with mental health services by searching online or through local health directories.It would be best to consult your doctor or therapist for a referral to the best mental health facility.I recommend searching for local hospitals or health services in your area using online resources like Google or a hospital directory."],
+         "context": [""]
+        },
+        {"tag": "self_care",
+         "patterns": ["How can I take care of my mental health?"],
+         "responses": ["Self-care is important for mental health. Try activities like exercise, meditation, journaling, or spending time with loved ones.Taking small steps every day, like getting enough sleep, eating healthy, and practicing mindfulness, can improve your mental well-being."],
+         "context": [""]
+        },
+        {"tag": "Self-Growth",
+         "patterns": ["How can I build self-confidence?"],
+         "responses": ["Set small goals, celebrate achievements, and practice self-compassion to boost confidence over time."],
+         "context": [""]
+        },
+        {"tag": "Happiness",
+         "patterns": ["What daily habits improve mental health?"],
+         "responses": [" Regular exercise, proper sleep, positive social interactions, and mindfulness practices help maintain good mental health."],
+         "context": [""]
+        },
+        {"tag": "Understanding",
+         "patterns": ["What is the difference between mental health and mental illness?"],
+         "responses": ["Mental health is about overall emotional well-being, while mental illness refers to conditions like depression, anxiety, or bipolar disorder that affect daily life."],
+         "context": [""]
+        },
+        {"tag": "Relationships ",
+         "patterns": ["Can being in a toxic relationship affect mental health?"],
+         "responses": ["Yes, toxic relationships can increase stress, anxiety, and low self-esteem. Setting boundaries and seeking support can help."],
+         "context": [""]
+        },
+        {"tag": " Daily Life",
+         "patterns": ["Why do I feel mentally drained even if I haven’t done much?"],
+         "responses": ["Emotional stress, overthinking, and lack of social interaction can cause mental exhaustion. Taking breaks and practicing self-care can help."],
+         "context": [""]
+        },
+        {"tag": "Therapy and Professional Help",
+         "patterns": ["When should I seek therapy?"],
+         "responses": ["If your thoughts, emotions, or behaviors interfere with daily life or relationships, professional help can provide support and guidance."],
+         "context": [""]
+        },
+        {"tag": "positive_mindset",
+         "patterns": ["How can I develop a positive mindset?"],
+         "responses": ["Practice gratitude, surround yourself with supportive people, challenge negative thoughts, and focus on personal growth."],
+         "context": [""]
+        },
+        {
+        "tag": "negative_thoughts",
+        "patterns": ["How can I stop negative thoughts?"],
+        "responses": ["Challenge negative thoughts with facts, practice mindfulness, and replace them with positive affirmations."],
+        "context": [""]
+        },
+        {
+        "tag": "panic_attacks",
+        "patterns": ["What should I do during a panic attack?"],
+        "responses": ["Focus on deep breathing, use grounding techniques, remind yourself that it will pass, and find a quiet space if possible."],
+        "context": [""]
+        },
+        {
+        "tag": "self_confidence",
+        "patterns": ["How can I build self-confidence?"],
+        "responses": ["Set small goals, focus on your strengths, practice self-compassion, and celebrate your achievements."],
+        "context": [""]
+        },
+        {
+        "tag": "mindfulness",
+        "patterns": ["What is mindfulness and how does it help?"],
+        "responses": ["Mindfulness is the practice of staying present in the moment. It helps reduce stress, improve focus, and enhance emotional well-being."],
+        "context": [""]
+        },
+        {
+        "tag": "emotional_resilience",
+        "patterns": ["How can I become more emotionally resilient?"],
+        "responses": ["Develop a positive outlook, build strong relationships, learn from challenges, and practice self-care regularly."],
+        "context": [""]
+         },
+         {
+         "tag": "overthinking",
+         "patterns": ["How do I stop overthinking?"],
+         "responses": ["Focus on the present, challenge irrational thoughts, engage in activities that distract you, and practice relaxation techniques."],
+         "context": [""]
+        },
+        {
+        "tag": "social_media_impact",
+        "patterns": ["Can social media affect mental health?"],
+        "responses": ["Yes, excessive social media use can lead to anxiety, stress, and low self-esteem. Limiting screen time and following positive content can help."],
+        "context": [""]
+        },
+        {
+                "tag": "ChronicWorry",
+                "patterns": ["Why do I always feel worried?"],
+                "responses": ["Constant worry can come from your brain trying to stay prepared for problems even when nothing is actually wrong. Sometimes, your thoughts start looping around 'what ifs' or worst-case scenarios, and it becomes a habit. It doesn't mean something is wrong with you. It just means your mind might need help slowing down and focusing on the present."],
+                "context": [""]
+              },
+              {
+                "tag": "PanicAttacks",
+                "patterns": ["What causes panic attacks?"],
+                "responses": ["Panic attacks are intense bursts of fear that can come out of nowhere. Your body reacts like it's in danger even if you're completely safe. They’re often triggered by stress, overthinking, or sometimes by nothing obvious at all. They feel scary, but they pass. Understanding what triggers them and how your body responds can help you stay calmer over time."],
+                "context": [""]
+              },
+              {
+                "tag": "Restlessness",
+                "patterns": ["Is it normal to feel restless and nervous all the time?"],
+                "responses": ["It's not uncommon, especially when your mind is busy or you feel like there’s too much going on around you. But if it’s happening all the time, it could be a sign that your body is stuck in a constant stress mode. It's not something to ignore—your mind might be asking for a reset or a new way to process what you're dealing with."],
+                "context": [""]
+              },
+              {
+                "tag": "HandlingAnxiety",
+                "patterns": ["What should I do when I feel anxious?"],
+                "responses": [
+                  "When anxiety hits, try to bring your focus back to the present moment. That might mean noticing your breathing, feeling something textured in your hand, or naming things you can see around you. Anxiety often builds in your thoughts but calming your body can help you interrupt that cycle.\nRecommendations:\n• Use grounding techniques like “5-4-3-2-1” (name 5 things you can see, 4 you can touch, etc.).\n• Move around—even a short walk or stretching can ease tension.\n• Try writing down what you're feeling to make it less overwhelming."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ConstantNervousness",
+                "patterns": ["How can I stop feeling nervous all the time?"],
+                "responses": [
+                  "Nervousness usually shows up when your mind is unsure about what’s coming or you feel pressure to do something perfectly. If it’s constant, you might be stuck in a habit of expecting something bad even if nothing bad is happening. Shifting that takes patience and practice.\nRecommendations:\n• Try practicing short breathing routines during your day, not just when you're nervous.\n• Break big tasks into smaller, more manageable ones.\n• Challenge thoughts like “what if I mess up?” with “what if I handle it better than I think?”"
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "AnxietySymptoms",
+                "patterns": ["What are the physical symptoms of anxiety?"],
+                "responses": ["Anxiety often shows up in your body before your mind catches on. You might feel a racing heart, tight chest, shaky hands, stomach aches, dizziness, or difficulty breathing. These symptoms can feel scary, but they’re not dangerous. They’re just your body responding to stress."],
+                "context": [""]
+              },
+              {
+                "tag": "FeelingHopeless",
+                "patterns": ["Why do I feel hopeless all the time?"],
+                "responses": [
+                  "Feeling hopeless can happen when your mind starts to believe that nothing will change or improve. This usually comes from being emotionally drained or going through tough times for too long. It doesn't mean you're weak—it just means your emotional energy is running low, and you need a way to recharge.",
+                  "Recommendations:\n• Keep a small list of things that went okay today even if they seem tiny.\n• Try doing one simple thing that used to make you feel a little better.\n• Give yourself credit for showing up, even when it’s hard."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "LossOfInterest",
+                "patterns": ["Is it normal to lose interest in everything?"],
+                "responses": [
+                  "Yes, it can happen when you're emotionally worn out or stuck in a low mood. Things that used to feel exciting might seem distant or pointless now. It's a signal that your mind needs rest and a slower pace—not that you’ve changed as a person."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ConstantFatigue",
+                "patterns": ["Why am I so tired all the time?"],
+                "responses": [
+                  "Tiredness isn’t just about sleep. Emotional exhaustion, stress, and low mood can drain your energy too. Even if you're sleeping enough, your brain might be working overtime in the background, making you feel worn out.",
+                  "Recommendations:\n• Pay attention to your daily habits—especially your sleep, meals, and screen time.\n• Take breaks, even from things you normally enjoy.\n• Consider using a mood tracker or journal to notice patterns."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "EmotionalNumbness",
+                "patterns": ["Can depression make me feel numb?"],
+                "responses": [
+                  "Yes. Sometimes your emotions shut down as a way to protect you from pain. You may not feel sad, just... nothing. That numbness is still a sign that something inside needs care and attention."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "AmIDepressed",
+                "patterns": ["How do I know if I’m depressed?"],
+                "responses": [
+                  "Depression doesn’t look the same for everyone, but common signs include feeling low most days, losing interest in things, feeling tired all the time, or thinking that nothing matters. If this has been going on for more than two weeks, it might be depression. You're not imagining it and you're not alone."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "WhenToSeekHelp",
+                "patterns": ["What are some signs that I need help with my depression?"],
+                "responses": [
+                  "If you're finding it hard to get through the day, losing interest in everything, or having thoughts like “what’s the point?”, those are signs that your mind is struggling and needs support. You don’t need to wait until things get worse to ask for help—noticing these signs is already a strong first step."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "WorkStress",
+                "patterns": ["How can I manage work-related stress?"],
+                "responses": [
+                  "Work stress builds when you're expected to do too much, too fast, or too perfectly. The key is to work with your energy—not against it. Take regular breaks, split large tasks into parts, and allow yourself to not get everything right on the first try."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "SchoolStress",
+                "patterns": ["What are some tips to deal with stress at school?"],
+                "responses": [
+                  "School stress often comes from trying to juggle academics, expectations, and personal goals all at once. The more organized and kind you are to yourself, the better you can handle it.",
+                  "Recommendations:\n• Use a planner to break assignments into smaller steps.\n• Don’t compare your progress with others—everyone has their own pace.\n• Set time for rest, not just work."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "FeelingOverwhelmed",
+                "patterns": ["Why am I feeling overwhelmed?"],
+                "responses": [
+                  "Overwhelm happens when your brain is trying to process too many things at once—thoughts, decisions, emotions, or tasks. It’s like trying to read 10 books at the same time. Your system needs fewer tabs open."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ConstantStress",
+                "patterns": ["Is it normal to feel stressed out all the time?"],
+                "responses": [
+                  "It might be common, but it’s not something to ignore. Constant stress can wear down your mind and body. If stress has become your “normal,” it’s time to start shifting how you respond to it, bit by bit."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "StressBodyEffects",
+                "patterns": ["How does stress affect my body?"],
+                "responses": [
+                  "Stress can show up as headaches, stomach problems, tense muscles, fatigue, or sleep troubles. Long-term stress can also mess with your focus and mood. Your body keeps the score, even when your mind tries to push through it."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "StressReliefTechniques",
+                "patterns": ["What relaxation techniques can help with stress?"],
+                "responses": [
+                  "Relaxation isn’t about doing nothing—it’s about helping your body and mind feel safe again.",
+                  "Recommendations:\n• Try slow, rhythmic breathing or light stretching.\n• Listen to calming sounds (nature, instrumental music, etc.).\n• Set aside 10 minutes a day just for quiet—no screens, no tasks."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "DrasticMoodChanges",
+                "patterns": ["Why do my moods change so drastically?"],
+                "responses": [
+                  "If your mood shifts feel very intense—like going from feeling super energetic to deeply low—it could be more than everyday ups and downs. These shifts can sometimes be tied to how your brain handles emotions and energy. The changes aren't your fault, and they aren't made up—your mind may just be switching states more sharply than most."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "HappySadSwing",
+                "patterns": ["Is it normal to feel extremely happy one moment and then really sad?"],
+                "responses": [
+                  "It’s normal to have emotional swings sometimes, especially when you're going through a lot. But if the shifts are extreme, sudden, and affect how you function—like your sleep, energy, or decisions—it could be a sign of something deeper going on. It's not about being dramatic or moody; it's something worth paying attention to."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "BipolarCauses",
+                "patterns": ["What causes mood swings in bipolar disorder?"],
+                "responses": [
+                  "In bipolar disorder, mood swings are influenced by changes in brain chemistry and how your emotions are regulated. These changes aren't always triggered by outside events—sometimes they happen on their own. That’s why people might feel high-energy for days and then drop into exhaustion or sadness even without a clear reason."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ManageMoodSwings",
+                "patterns": ["How can I manage extreme mood changes?"],
+                "responses": [
+                  "It helps to keep track of your mood patterns—noticing what happens before a shift, and how your body reacts. Creating daily routines, staying consistent with sleep, and avoiding extreme stress or stimulation can also reduce sudden changes.",
+                  "Recommendations:\n• Track your mood and energy levels regularly.\n• Avoid making big decisions when you're at an emotional extreme.\n• Try to keep your daily habits steady, even when your mood changes.\n• If mood shifts feel unmanageable or dangerous, talk to someone you trust."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "BipolarTreatment",
+                "patterns": ["Is there treatment for bipolar disorder?"],
+                "responses": [
+                  "Yes, there is. Bipolar disorder can be managed over time. With the right strategies, people can live balanced lives. Treatment usually involves a mix of support systems, self-awareness, and long-term care. It's not a quick fix, but it's very possible to feel more in control."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "BipolarSymptoms",
+                "patterns": ["What are the symptoms of bipolar disorder?"],
+                "responses": [
+                  "Common signs include episodes of unusually high energy (feeling overly confident, talking fast, needing little sleep) followed by deep lows (sadness, fatigue, loss of interest). These mood changes can last for days or even weeks. You might also notice racing thoughts or feeling like your mind won’t slow down."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "WhatIsPTSD",
+                "patterns": ["What is PTSD?"],
+                "responses": [
+                  "PTSD stands for Post-Traumatic Stress Disorder. It’s what can happen when your mind hasn’t fully healed from something really scary, painful, or overwhelming. Even if the event is over, your brain might still feel like it’s happening and that can affect how you think, feel, and react every day."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "RelivingTrauma",
+                "patterns": ["Why do I keep reliving traumatic events?"],
+                "responses": [
+                  "When something deeply upsetting happens, your brain might replay it as a way of trying to process it. But instead of helping, it can get stuck showing up in dreams, flashbacks, or even when something reminds you of that moment. This is your brain still reacting to a threat that’s no longer there."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "DisconnectedReality",
+                "patterns": ["Can PTSD make me feel disconnected from reality?"],
+                "responses": [
+                  "Yes, it can. Some people feel like they’re outside their body, or that the world doesn’t feel real. This is a way your mind might try to protect you from feeling overwhelmed, but it can be confusing or scary."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "StopFlashbacks",
+                "patterns": ["How do I stop having flashbacks?"],
+                "responses": [
+                  "Flashbacks can be triggered by sounds, smells, places, or sometimes, by nothing obvious at all. You can’t always stop them completely right away, but you can learn how to ground yourself when they happen.",
+                  "Recommendations:\n• Practice grounding techniques: hold a textured object, touch cold water, or name things you can see.\n• Write down what you feel after a flashback to start recognizing triggers.\n• Keep a safe space in your mind (or physically) that helps you feel calm when a memory returns."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "HaveIPTSD",
+                "patterns": ["How do I know if I have PTSD?"],
+                "responses": [
+                  "If you've been through something traumatic and still feel like you're living it through nightmares, flashbacks, intense fear, or emotional numbness even months later, those could be signs of PTSD. It's not about being weak; it's how your mind responds to real pain."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "PTSDSigns",
+                "patterns": ["What are the signs of PTSD?"],
+                "responses": [
+                  "Common signs include re-experiencing the event, avoiding people or places that remind you of it, feeling jumpy or on edge, trouble sleeping, and feeling emotionally distant. These reactions are your brain’s way of trying to protect you, but they can get in the way of daily life."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "CheckingBehavior",
+                "patterns": ["Why do I keep checking things repeatedly?"],
+                "responses": [
+                  "Repeated checking like making sure the door is locked again and again is often a way to ease the anxiety that something bad might happen. Even if you know it’s fine, your brain keeps asking 'what if?' This checking loop can feel like the only way to feel safe."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ObsessiveThoughts",
+                "patterns": ["How do I stop my obsessive thoughts?"],
+                "responses": [
+                  "Obsessive thoughts feel intrusive like your mind is stuck on a loop you didn’t choose. The more you try to ignore them, the louder they can get. What helps is recognizing that a thought is just a thought; it doesn’t mean it’s true or important.",
+                  "Recommendations:\n• Label the thought as 'just a thought,' not a fact.\n• Don’t try to push it away; observe it, then refocus on something neutral.\n• Try using a journal to write down patterns: time, situation, feeling."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "HandWashingCompulsion",
+                "patterns": ["Is it normal to feel like I need to wash my hands all the time?"],
+                "responses": [
+                  "If the urge to wash your hands comes from a fear that something bad will happen even when there’s no clear reason, it could be a compulsion. It might feel like the only way to calm down. You're not doing it for attention or habit; your mind is trying to reduce anxiety through action."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "CompulsiveBehaviors",
+                "patterns": ["What causes compulsive behaviors?"],
+                "responses": [
+                  "Compulsions happen when your brain links certain actions to relief from fear or discomfort. For example, if you feel anxious about germs, washing hands might bring temporary calm. The problem is, the brain starts demanding the behavior over and over to feel safe."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ManagingObsessiveThoughts",
+                "patterns": ["How can I manage obsessive thoughts and actions?"],
+                "responses": [
+                  "Start by noticing when they happen and what emotion comes with them. The goal isn’t to stop them immediately; it’s to respond to them differently. You can learn to sit with the discomfort without doing the usual action right away."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "OCDTherapy",
+                "patterns": ["Is OCD something I need therapy for?"],
+                "responses": [
+                  "If it’s affecting your daily life, decisions, or taking up a lot of time, then yes, therapy can help. But you can also start by understanding your patterns and trying out small strategies that help you challenge the cycle. Therapy is a choice, not a must at first."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "SimpleSelfCare",
+                "patterns": ["What are some simple self-care activities I can do?"],
+                "responses": [
+                  "Self-care doesn’t have to be fancy. It’s anything that helps you feel more grounded and calm. Drinking water, going for a walk, listening to music, stretching, or simply sitting quietly can all be forms of self-care."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "MentalSelfCare",
+                "patterns": ["How do I take care of myself mentally?"],
+                "responses": [
+                  "Start by checking in with yourself daily: how are you feeling, what’s on your mind, and what you need. Set boundaries, let go of guilt when resting, and give your thoughts some space instead of bottling them up."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "ImportanceOfSelfCare",
+                "patterns": ["Why is self-care important for my well-being?"],
+                "responses": [
+                  "Self-care is how you recharge your mind and body. It’s not selfish; it’s how you keep your inner battery full enough to handle what life throws at you. When you skip it, stress builds up. When you practice it, you give yourself a chance to breathe."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "RelaxationAndClearMind",
+                "patterns": ["How can I relax and clear my mind?"],
+                "responses": [
+                  "Try slowing things down, even for 10 minutes. Step away from screens, take deep breaths, or focus on something gentle like drawing, music, or nature sounds. The goal isn’t to 'empty' your mind; it’s to let your thoughts settle."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "MindfulnessPractice",
+                "patterns": ["What are some ways to practice mindfulness daily?"],
+                "responses": [
+                  "Mindfulness is about noticing the present moment without judging it. You can do this by paying attention to your breath, eating slowly and really tasting your food, or even just pausing to feel the air on your skin."
+                ],
+                "context": [""]
+              },
+              {
+                "tag": "SelfCareWhenOverwhelmed",
+                "patterns": ["Can I practice self-care even if I’m feeling overwhelmed?"],
+                "responses": [
+                  "Yes, and it’s especially important then. When everything feels too much, the key is to do something small and doable. You don’t need a whole routine; you just need one gentle thing that brings you back to yourself.",
+                  "Recommendations:\n• Drink a glass of water and sit still for one full minute.\n• Write down three things you feel without trying to change them.\n• Do one thing that feels familiar: music, scent, movement."
+                ],
+                "context": [""]
+              }
+              
+        
+	         ]
+}

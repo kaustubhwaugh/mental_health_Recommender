@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Admin - Add Mental Health Questions</h2>
+
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="question_text" class="form-label">Enter Question:</label>
+                <input type="text" name="question_text" id="question_text" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Question</button>
+        </form>
+
+        <h3 class="mt-5">Existing Questions</h3>
+        <ul class="list-group">
+            {% for question in questions %}
+                <li class="list-group-item">{{ question.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

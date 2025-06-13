@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}English Text Chatbot - Mental Health System{% endblock title %}
+
+{# Override navbar links for customer chatbot pages #}
+{% block navbar_links %}
+    <a href="{% url 'index' %}" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+    <a href="{% url 'assessment_view' %}" class="nav-item nav-link {% if request.path == '/assessment_view/' %}active{% endif %}">Assessment</a>
+    <a href="{% url 'customer_dashboard_view' %}" class="nav-item nav-link {% if request.path == '/customer_dashboard_view/' %}active{% endif %}">Chatbot</a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout_request' %}" class="nav-item nav-link">Logout</a>
+        <a href="{% url 'customer_dashboard_view' %}" class="nav-item nav-link">Dashboard</a>
+    {% else %}
+        <a href="{% url 'register' %}" class="nav-item nav-link">Sign Up</a>
+        <a href="{% url 'login1' %}" class="nav-item nav-link">Sign In</a>
+    {% endif %}
+{% endblock navbar_links %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center pt-4 pb-5">
+        <div class="w-100 p-3" style="max-width: 700px;">
+            <div class="card border-default shadow-lg rounded-3" style="background-color: #f9f9f9; height: 500px; display: flex; flex-direction: column;">
+                <div class="card-body d-flex flex-column" style="background-color: #a9b2b4;">
+                    <center><h3 style="color:white;">ENGLISH TEXT CHATBOT</h3></center> {# Added title #}
+                    <form method="POST" class="d-flex flex-column h-100">
+                        {% csrf_token %}
+
+                        <div class="chat-history flex-grow-1" style="max-height: 380px; overflow-y: auto; padding-right: 15px;">
+                            {% for message in chat_history %}
+                                <div class="chat-message mb-2">
+                                    {% if message.user %}
+                                        <div class="user-message text-end">
+                                            <p class="message-content d-inline-block" style="background-color: #6C63FF; color: white; border-radius: 12px; padding: 10px; max-width: 70%; margin-left: auto; word-wrap: break-word;">
+                                                <strong>USER:</strong> {{ message.user }}
+                                            </p>
+                                        </div>
+                                    {% endif %}
+                                    {% if message.bot %}
+                                        <div class="bot-message text-start">
+                                            <p class="message-content d-inline-block" style="background-color: #050d038b; color: white; border-radius: 12px; padding: 10px; max-width: 70%; margin-right: auto; word-wrap: break-word;">
+                                                <strong>BOT:</strong> {{ message.bot }}
+                                            </p>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="input-area d-flex align-items-center mt-3">
+                            <input placeholder="Type your message..." type="text" name="input" class="form-control flex-grow-1 me-2"
+                                style="border-radius: 20px; border: 2px solid #6C63FF; padding: 10px 15px; color: #333; background-color: #f3f3f3;">
+
+                            <button type="submit" class="btn btn-warning" style="border-radius: 20px; padding: 10px 20px;">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

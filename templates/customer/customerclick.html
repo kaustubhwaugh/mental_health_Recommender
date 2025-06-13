@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Customer Access - Mental Health System{% endblock title %}
+
+{% block extra_head %}
+<style>
+    .jumbotron {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 50px 20px; /* Add some padding for better spacing */
+    }
+
+    .jumbotron h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron .lead {
+        margin-bottom: 30px;
+    }
+
+    .jumbotron .btn {
+        margin: 10px; /* Add margin between buttons */
+    }
+</style>
+{% endblock extra_head %}
+
+{% block content %}
+<div class="jumbotron text-center bg-light py-5">
+    <h1 class="display-4 text-primary">Hello, Customer</h1>
+    <p class="lead text-muted">Welcome to Medical Chatbot System</p>
+    <hr class="my-4">
+    <p class="lead">
+        <a class="btn btn-danger btn-lg" href="{% url 'register' %}" role="button">Create Your Account</a>
+        <a class="btn btn-success btn-lg" href="{% url 'login1' %}" role="button">Login</a>
+    </p>
+</div>
+{% endblock content %}

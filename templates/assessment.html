@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mental Health Assessment - Mental Health System{% endblock title %}
+
+{% block extra_head %}
+    <style>
+        .question-paper {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid #007bff;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .question-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .form-check-label {
+            font-size: 16px;
+        }
+        .form-check {
+            margin-bottom: 5px;
+        }
+        .btn-submit {
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 8px;
+        }
+    </style>
+{% endblock extra_head %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="question-paper">
+            <h2 class="text-center text-primary mb-4">Mental Health Assessment</h2>
+
+            {% if error %}
+                <p class="text-danger text-center">{{ error }}</p>
+            {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="POST" action="{% url 'ml_prediction_view' %}">
+                {% csrf_token %}
+                <div class="row">
+                    {% for question in questions %}
+                        <div class="col-md-6 mb-4">
+                            <p class="question-title">Q{{ forloop.counter }}. {{ question.text }}</p>
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="{{ question.question_id }}" value="0" id="{{ question.question_id }}_0" required>
+                                <label class="form-check-label" for="{{ question.question_id }}_0">😐 Never</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="{{ question.question_id }}" value="1" id="{{ question.question_id }}_1">
+                                <label class="form-check-label" for="{{ question.question_id }}_1">🤔 Sometimes</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="{{ question.question_id }}" value="2" id="{{ question.question_id }}_2">
+                                <label class="form-check-label" for="{{ question.question_id }}_2">😟 Often</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="{{ question.question_id }}" value="3" id="{{ question.question_id }}_3">
+                                <label class="form-check-label" for="{{ question.question_id }}_3">😞 Always</label>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-submit">Submit Assessment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
